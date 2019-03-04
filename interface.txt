@@ -1,0 +1,45 @@
+const H = 0; // horizontal placement of a tile
+const V = 1; // vertical placement of a tile
+
+function is_transversal(m, n, lenS, Sr[], Sc[]) callbacks {
+   procedure exhibit_untouched_tile(row,col,dir);
+}
+
+procedure produce_min_transversal(m, n) callbacks {
+   procedure place_in_S(row,col);
+}
+
+procedure produce_max_packing(m, n) callbacks {
+   procedure place_tile(row,col,dir);
+}
+
+function max_card_of_a_packing(m, n); 
+
+function min_card_of_a_transversal(m, n); 
+
+main {
+    read m1, n1, lenS;
+    for i to lenS {
+      read Sr[i];
+      read Sc[i];
+    }
+    call res1 = is_transversal(m1, n1, lenS, Sr, Sc);
+    write res1;
+
+    read m2, n2;
+    call res2 = min_card_of_a_transversal(m2, n2);
+    write res2;
+
+    read m3, n3;
+    call res3 = max_card_of_a_packing(m3, n3);
+    write res3;
+
+    read choice;
+    if choice {
+        read m4, n4;
+        call produce_min_transversal(m4, n4);
+
+        read m5, n5;
+        call produce_max_packing(m5, n5);
+    }
+}

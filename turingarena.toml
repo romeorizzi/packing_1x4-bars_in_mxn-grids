@@ -1,0 +1,2 @@
+[scoring]
+goals = ["is_transversal", "cert_NOTtransv", "min_transversal", "max_packing", "tell_min", "tell_max", "tell_min_huge", "tell_max_huge"]
