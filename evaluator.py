@@ -5,7 +5,7 @@ H = 0   # horizontal placement of a tile
 V = 1   # vertical placement of a tile
 
 num_offered_transversals = 0
-def offer_a_transversal(m,n):
+def offer_a_min_transversal(m,n):
     global num_offered_transversals
     num_offered_transversals += 1
 
@@ -41,11 +41,11 @@ def offer_a_transversal(m,n):
         transversal += row + '\n'
 
     
-    ta.send_file(transversal, filename=f"tiling_{num_offered_transversals}.txt")
+    ta.send_file(transversal, filename=f"packing_{num_offered_transversals}.txt")
 
         
 num_offered_packings = 0
-def offer_a_packing(m,n):
+def offer_a_max_packing(m,n):
     global num_offered_packings
     num_offered_packings += 1
 
@@ -82,7 +82,7 @@ def offer_a_packing(m,n):
     #  da progettare anche la forma della rappresentazione più opportuna del packing in memoria per facilitare la traduzione visuale. Per l'idea astratta del packing si può avvalersi invece della soluzione del problema nella cartella solutions (in futuro, con l'esperienza in classe, capiremo se non sia opportuno oscurarla offrendo packing meno regolari e più caotici. Anche per questo è bene separare le varie fasi che portano a renderizzare l'idea del packing (l'oggetto combinatorico), entro un file di ASCIIART).
 """
 
-    ta.send_file(packing, filename=f"tiling_{num_offered_packings}.txt")
+    ta.send_file(packing, filename=f"packing_{num_offered_packings}.txt")
 
 
 
@@ -333,5 +333,3 @@ ta.goals.setdefault("tell_max_huge", True)
 
 print(ta.goals)
 
-offer_a_packing(4,7)
-offer_a_transversal(4,7)
